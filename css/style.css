@@ -1,0 +1,129 @@
+@import url('https://fonts.googleapis.com/css2?family=Google+Sans+Code:ital,wght,MONO@0,300..800,0..1;1,300..800,0..1&display=swap');
+
+:root {
+    --cor-padrao: #340f08;
+    --fonte-padrao: "Google Sans Code", monospace;
+    --cor-fundo: #eaceaa
+}
+
+* {
+    padding: 0;
+    border: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+html, body {
+    min-height: 100vh;
+    background-color: var(--cor-padrao);
+}
+
+main {
+    display: grid;
+    grid-template-columns: 30% 1fr;
+    grid-gap: 16px;
+    margin: 10px;
+}
+
+.esquerda, .experiencias, .educacao{
+    background-color: var(--cor-fundo);
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.experiencias, .educacao{
+    padding: 10px;
+}
+
+.esquerda {
+    font-family: var(--fonte-padrao);
+    box-shadow: 5px 5px 10px #6c2005;
+}
+
+.direita {
+    font-family: var(--fonte-padrao);
+    gap: 20px;
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+}
+
+.data, i {
+    color: var(--cor-padrao);
+}
+
+.imagem-esquerda {
+    position: relative;
+}
+
+.imagem-esquerda h1 {
+    position: absolute;
+    bottom: 0;
+    color: #95420c;
+    margin-left: 5px;
+}
+
+.imagem-esquerda img {
+    width: 100%;
+    height: auto;
+    /*border-radius: 250px;*/
+    object-fit: cover;
+}
+
+ul {
+    list-style: none
+}
+
+.pessoal, .habilidades, .linguagens {
+    padding: 16px;
+    line-height: 20px;
+}
+
+.progresso {
+    display: inline-block;
+    width: 100%;
+    height: 16px;
+    background-color: #fab23f;
+    transition: 100ms ease;
+    border-radius: 20px;
+}
+
+.barra {
+    border-radius: 20px;
+    height: 100%;
+    background-color: #e59007;
+}
+
+.nome-item {
+    font-weight: bold;
+}
+
+.experiencias {
+    box-shadow: 5px 5px 10px #6c2005;
+}
+
+.educacao {
+    box-shadow: 5px 5px 10px #6c2005;
+}
+
+footer {
+    color: var(--cor-padrao);
+    background-color: var(--cor-fundo);
+    padding: 1.5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    font-family: var(--fonte-padrao);
+}
+
+footer a {
+    text-decoration: none;
+    color: var(--cor-padrao);
+    padding: 5px;
+    transition: 100ms ease;
+}
+
+footer a:hover {
+    color: #e59007;
+}
