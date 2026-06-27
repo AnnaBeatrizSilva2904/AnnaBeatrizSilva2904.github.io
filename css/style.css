@@ -1,9 +1,12 @@
 @import url('https://fonts.googleapis.com/css2?family=Google+Sans+Code:ital,wght,MONO@0,300..800,0..1;1,300..800,0..1&display=swap');
+@import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css");
 
 :root {
-    --cor-padrao: #340f08;
+    --cor-fundo: #282C34;
+    --cor-letras: #C2286B;
+    --cor-cards: #1a1c1f;
+    --cor-letras-fundo: #83C1C0;
     --fonte-padrao: "Google Sans Code", monospace;
-    --cor-fundo: #eaceaa
 }
 
 * {
@@ -13,9 +16,10 @@
     box-sizing: border-box;
 }
 
-html, body {
+html,
+body {
     min-height: 100vh;
-    background-color: var(--cor-padrao);
+    background-color: var(--cor-fundo);
 }
 
 main {
@@ -31,19 +35,19 @@ main {
     }
 }
 
-.esquerda, .experiencias, .educacao{
-    background-color: var(--cor-fundo);
+.experiencias,
+.educacao {
+    background-color: var(--cor-cards);
+    padding: 10px;
     border-radius: 10px;
     overflow: hidden;
 }
 
-.experiencias, .educacao{
-    padding: 10px;
-}
-
-.esquerda {
+.fundo-esquerda {
+    background-color: var(--cor-cards);
+    border-radius: 10px;
     font-family: var(--fonte-padrao);
-    box-shadow: 5px 5px 10px #6c2005;
+    box-shadow: 5px 5px 10px #1a1c1f;
 }
 
 .direita {
@@ -52,44 +56,55 @@ main {
     display: flex;
     flex-direction: column;
     padding: 10px;
+    color: var(--cor-letras);
 }
 
-.data, i {
-    color: var(--cor-padrao);
+.data,
+i {
+    color: var(--cor-letras-fundo);
 }
 
-.imagem-esquerda {
+.nome-esquerda {
     position: relative;
+    display: flex;
+    text-align: center;
+    justify-content: center;
 }
 
-.imagem-esquerda h1 {
-    position: absolute;
+.nome-esquerda h1 {
+    display: flex;
+    justify-content: center;
+    text-align: center;
     bottom: 0;
-    color: #95420c;
-    margin-left: 5px;
+    color: var(--cor-letras);
+    margin-top: 20px;
 }
 
 .imagem-esquerda img {
     width: 100%;
     height: auto;
-    /*border-radius: 250px;*/
+    border-radius: 50%;
     object-fit: cover;
+    margin-bottom: 10px;
 }
 
 ul {
     list-style: none
 }
 
-.pessoal, .habilidades, .linguagens {
+.pessoal,
+.habilidades,
+.linguagens {
     padding: 16px;
     line-height: 20px;
+    color: var(--cor-letras-fundo);
 }
 
 .progresso {
     display: inline-block;
     width: 100%;
     height: 16px;
-    background-color: #fab23f;
+    background-color: #F0D145;
     transition: 100ms ease;
     border-radius: 20px;
 }
@@ -97,7 +112,7 @@ ul {
 .barra {
     border-radius: 20px;
     height: 100%;
-    background-color: #e59007;
+    background-color: #c9a400;
 }
 
 .nome-item {
@@ -105,31 +120,32 @@ ul {
 }
 
 .experiencias {
-    box-shadow: 5px 5px 10px #6c2005;
+    box-shadow: 5px 5px 10px #1a1c1f;
 }
 
 .educacao {
-    box-shadow: 5px 5px 10px #6c2005;
+    box-shadow: 5px 5px 10px #1a1c1f;
 }
 
 footer {
     color: var(--cor-padrao);
-    background-color: var(--cor-fundo);
+    background-color: var(--cor-cards);
     padding: 1.5rem;
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
     font-family: var(--fonte-padrao);
+    color: var(--cor-letras-fundo);
 }
 
 footer a {
     text-decoration: none;
-    color: var(--cor-padrao);
+    color: var(--cor-letras-fundo);
     padding: 5px;
     transition: 100ms ease;
 }
 
 footer a:hover {
-    color: #e59007;
+    color: var(--cor-letras);
 }
